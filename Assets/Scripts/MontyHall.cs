@@ -54,7 +54,14 @@ public class MontyHall : MonoBehaviour
             // based on what the winning platform is.
             
             /* Your code here */
-
+            if(i == winningPlatform)
+            {
+                platforms[i].GetComponent<Platform>().targetSceneId = 1;
+            }
+            else
+            {
+                platforms[i].GetComponent<Platform>().targetSceneId = 2;
+            }
         }
 
         // Initialize player's choice and the revealed platform
